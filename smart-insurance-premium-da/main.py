@@ -208,10 +208,11 @@ st.markdown("""
         --success-color: #34C759;
         --warning-color: #FF9500;
         --danger-color: #FF3B30;
-        --text-primary: #1C1C1E;
-        --text-secondary: #8E8E93;
-        --bg-secondary: #F2F2F7;
-        --border-color: #E5E5EA;
+        --text-primary: #ffffff;
+        --text-secondary: #a0a0b0;
+        --bg-primary: #0d1321;
+        --bg-secondary: #1a2332;
+        --border-color: #2a3548;
     }
 
     * {
@@ -221,44 +222,47 @@ st.markdown("""
 
     body, .main {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        background-color: red !important;
+        background-color: #0d1321 !important;
+        color: #ffffff !important;
     }
 
     [data-testid="stAppViewContainer"] {
-        background-color: #FAFAFA !important;
+        background-color: #0d1321 !important;
     }
 
     [data-testid="stMainBlockContainer"] {
-        background-color: #FAFAFA !important;
+        background-color: #0d1321 !important;
     }
 
     .main .block-container {
-        background-color: #FAFAFA !important;
+        background-color: #0d1321 !important;
         padding: 2rem 1rem;
     }
 
     [data-testid="stMarkdownContainer"] {
         background-color: transparent;
+        color: #ffffff !important;
     }
 
     .stTabs [data-baseweb="tab-list"] {
-        background-color: white;
+        background-color: #1a2332;
         border-radius: 12px;
         padding: 0.5rem;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     }
 
     .metric-card {
-        background: white;
+        background: #1a2332;
         padding: 1.5rem;
         border-radius: 12px;
         border: 1px solid var(--border-color);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         transition: all 0.2s ease;
+        color: #ffffff;
     }
 
     .metric-card:hover {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         border-color: var(--primary-color);
         transform: translateY(-2px);
     }
@@ -267,7 +271,7 @@ st.markdown("""
         padding: 2rem 2rem 1rem 2rem;
         border-bottom: 1px solid var(--border-color);
         background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
-        color: white;
+        color: #ffffff;
         border-radius: 12px;
         margin-bottom: 2rem;
     }
@@ -277,6 +281,7 @@ st.markdown("""
         font-weight: 700;
         margin: 0 0 0.5rem 0;
         letter-spacing: -0.5px;
+        color: #ffffff;
     }
 
     .header-section p {
@@ -284,29 +289,31 @@ st.markdown("""
         opacity: 0.95;
         margin: 0;
         font-weight: 500;
+        color: #ffffff;
     }
 
     .insight-box {
-        background: white;
+        background: #1a2332;
         padding: 1.5rem;
         border-left: 4px solid var(--primary-color);
         border-radius: 8px;
         margin: 1rem 0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         border: 1px solid var(--border-color);
+        color: #ffffff;
     }
 
     .insight-box h3 {
         margin-top: 0;
         margin-bottom: 0.5rem;
-        color: var(--text-primary);
+        color: #ffffff;
         font-weight: 600;
         font-size: 1.1rem;
     }
 
     .insight-box p {
         margin: 0.25rem 0;
-        color: var(--text-primary);
+        color: #ffffff;
         line-height: 1.6;
     }
 
@@ -334,33 +341,42 @@ st.markdown("""
 
     /* Streamlit overrides for better visibility */
     section[data-testid="stSidebar"] {
-        background-color: #FFFFFF;
+        background-color: #1a2332;
         border-right: 1px solid var(--border-color);
+        color: #ffffff;
+    }
+
+    section[data-testid="stSidebar"] * {
+        color: #ffffff !important;
     }
 
     .stSelectbox, .stSlider, .stTextInput, .stTextArea {
-        background-color: white;
+        background-color: #1a2332;
+        color: #ffffff;
     }
 
     [data-testid="stForm"] {
-        background-color: white;
+        background-color: #1a2332;
         padding: 1.5rem;
         border-radius: 12px;
         border: 1px solid var(--border-color);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        color: #ffffff;
     }
 
     [data-testid="stDataFrame"] {
-        background-color: white;
+        background-color: #1a2332;
+        color: #ffffff;
     }
 
     .stDataFrame {
-        background-color: white !important;
+        background-color: #1a2332 !important;
+        color: #ffffff !important;
     }
 
     /* Charts */
     [data-testid="stPlotlyChart"] {
-        background-color: white;
+        background-color: #1a2332;
         padding: 1rem;
         border-radius: 8px;
         border: 1px solid var(--border-color);
@@ -369,7 +385,56 @@ st.markdown("""
     /* Info/Warning boxes */
     .stAlert {
         border-radius: 8px;
-        background-color: white;
+        background-color: #1a2332;
+        color: #ffffff;
+    }
+
+    /* Additional text color fixes */
+    p, span, div, label {
+        color: #ffffff !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
+    }
+
+    /* Streamlit specific overrides */
+    [data-testid="stHeading"] {
+        color: #ffffff !important;
+    }
+
+    [data-testid="stText"] {
+        color: #ffffff !important;
+    }
+
+    [data-testid="stButton"] {
+        color: #ffffff !important;
+    }
+
+    /* Selectbox and input elements */
+    [data-baseweb="select"] {
+        background-color: #1a2332 !important;
+        color: #ffffff !important;
+    }
+
+    [data-baseweb="input"] {
+        background-color: #1a2332 !important;
+        color: #ffffff !important;
+    }
+
+    /* Sidebar text */
+    [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+        color: #ffffff !important;
+    }
+
+    [data-testid="stSidebar"] p {
+        color: #ffffff !important;
+    }
+
+    [data-testid="stSidebar"] h1, 
+    [data-testid="stSidebar"] h2, 
+    [data-testid="stSidebar"] h3 {
+        color: #ffffff !important;
     }
 </style>
 """, unsafe_allow_html=True)
